@@ -1,0 +1,104 @@
+.container{
+    display: flex;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    height: 100%;
+}
+
+.forca{
+    width: 50%;
+    height: 55%;
+}
+.forca img{
+    width: 400px;
+}
+.direita{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.direita button{
+    width: 200px;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    background-color: #27AE60;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-right: 10%;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+}
+.botao{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    align-items: flex-start;
+}
+.teclado{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.palavra-jogo{
+    margin-top: 10%;
+    width: 100%;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+}
+
+.letra-jogo{
+    font-family: 'Noto Sans', sans-serif;
+    height: 68px;
+    font-size: 50px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.container-letras{
+    width: 700px;
+    height: 90px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.letra{
+    width: 40px;
+    margin-right: 11px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #39739D;
+    border-radius: 3px;
+    border: 1px #7AA7C7 solid;
+    cursor: pointer;
+}
+
+.naoclicada{
+    background-color: #E1ECF4;
+}
+
+.clicada{
+    background-color: #9FAAB5;
+    color: #798A9F;
+}
+
+.escondido{
+    display: none;
+}
