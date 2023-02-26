@@ -2,16 +2,17 @@ import React from "react"
 import alfabeto from "../alfabeto"
 
 export default function Letras(props){
-    const {letrasClicadas} = props
+    const {letrasClicadas , escolherLetra, desabilitar} = props
 
 
     return (
         <div className="teclado">
         <div className="container-letras">
             {alfabeto.map (l => (
-            <button onClick={console.log(letrasClicadas.includes(l), letrasClicadas)} 
-            disabled={letrasClicadas.length === 0  ? false : true} 
-            className={letrasClicadas.length === 0 || letrasClicadas.includes(l) ? '': "clicada" }
+            <button data-test="letter"
+            onClick={() => escolherLetra(l)}
+            disabled={desabilitar || letrasClicadas.includes(l)} 
+            className={desabilitar|| letrasClicadas.includes(l) ? "clicada" : ""}
             key={l}
             > 
             {l.toUpperCase()}
