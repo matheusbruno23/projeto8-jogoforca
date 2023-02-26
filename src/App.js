@@ -10,8 +10,8 @@ export default function App() {
   const [letrasClicadas, setLetrasClicadas] = useState([alfabeto])
   const [erro, setErro] = useState(0)
   const [corPalavra, setCorPalavra] = useState('preto')
-  const [palavraEscolhida, setPalavraEscolhida] = useState([]) // palavra jogo
-  const [palavraCerta, setPalavraCerta] = useState([]) // palavra escolhida
+  const [palavraEscolhida, setPalavraEscolhida] = useState([])
+  const [palavraCerta, setPalavraCerta] = useState([])
   const [desabilitar, setDesabilitar] = useState(true)
 
 
@@ -20,7 +20,7 @@ export default function App() {
     const palavra = palavras[index]
     const arrayLetras = palavra.split('')
     setPalavraCerta(arrayLetras)
-    console.log(palavra)
+
 
 
     let underline = []
