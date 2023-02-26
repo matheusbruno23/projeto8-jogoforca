@@ -1,23 +1,24 @@
 import React from "react"
+import alfabeto from "../alfabeto"
 
 export default function Letras(props){
-    const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    const {letrasClicadas} = props
 
 
     return (
         <div className="teclado">
         <div className="container-letras">
-            {alfabeto.map((l)=> <Letra letra={l} classe={props.classe}></Letra>)}
+            {alfabeto.map (l => (
+            <button onClick={console.log(letrasClicadas.includes(l), letrasClicadas)} 
+            disabled={letrasClicadas.length === 0  ? false : true} 
+            className={letrasClicadas.length === 0 || letrasClicadas.includes(l) ? '': "clicada" }
+            key={l}
+            > 
+            {l.toUpperCase()}
+            </button>
+            ))}
         </div>
         </div>
     )
-    function Letra(props){
-        return (     
-            <div className={props.classe}>{props.letra.toUpperCase()}</div>
-            
-        )
-    
-        
-    }
 }
 
